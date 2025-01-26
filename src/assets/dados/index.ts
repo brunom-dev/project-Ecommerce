@@ -20,84 +20,96 @@ const produtos: CardProps[] = [
       "name": "Combo Gamer Meetion",
       "image": produto1,
       "rating": 4,
-      "price": 4000
+      "price": 4000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 2,
       "name": "Msi GeFore Gtx 1650",
       "image": produto2,
       "rating": 5,
-      "price": 20000
+      "price": 20000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 3,
       "name": "Dualsense PS5",
       "image": produto3,
       "rating": 5,
-      "price": 4000
+      "price": 465,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos! "
     },
     {
       "id": 4,
       "name": "Cadeira Gamer Frizzi",
       "image": produto4,
       "rating": 3,
-      "price": 17500
+      "price": 17500,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 5,
       "name": "iPhone 14 Pro Max 512GB",
       "image": produto5,
       "rating": 5,
-      "price": 115000
+      "price": 115000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 6,
       "name": "Samsung Galaxy S23 Ultra 1TB",
       "image": produto6,
       "rating": 5,
-      "price": 110000
+      "price": 110000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 7,
       "name": "Asus Rog Phone 3 Gamer",
       "image": produto7,
       "rating": 4,
-      "price": 65000
+      "price": 65000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 8,
       "name": "Xiaomi 13 Ultra",
       "image": produto8,
       "rating": 4,
-      "price": 80500
+      "price": 80500,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 9,
       "name": "Xbox Series X",
       "image": produto9,
       "rating": 5,
-      "price": 45000
+      "price": 45000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 10,
       "name": "Racingwheel GT480 Ferrari",
       "image": produto10,
       "rating": 5,
-      "price": 14000
+      "price": 14000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 11,
       "name": "PlayStation 5",
       "image": produto11,
       "rating": 5,
-      "price": 54000
+      "price": 54000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
       "id": 12,
       "name": "Gaming Desktop RTX 3090Ti",
       "image":  produto12,
       "rating": 5,
-      "price": 450000
+      "price": 450000,
+      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     }
 ]
 

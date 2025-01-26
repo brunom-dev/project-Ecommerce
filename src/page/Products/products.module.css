@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(219, 219, 219);
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.card {
+    margin-top: 40px;
+    display: flex;
+    padding: 60px 30px;
+    border-radius: 12px;
+    background-color: white;
+    gap: 50px;
+    width: 1000px; 
+}
+
+.image-card {
+    width: 40%;
+}
+
+.image-card img {
+    width: 350px;
+}
+
+.info-card {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-card h2{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.info-card .ratingContainer {
+    color: #777777;
+    display: flex;
+    gap: 2px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.info-card .price {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.info-card .desc {
+    width: 80%;
+}
+
+
+@media screen and (max-width:  850px ) {
+    .card {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 10px;
+        margin-top: 10px;
+    }
+
+    .image-card {
+        width: 50%;
+    }
+
+    .image-card img {
+        width: 100%;
+    }
+
+    .info-card {
+        width: 90%;
+    }
+
+    .info-card h2{
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .info-card .price {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    
+}

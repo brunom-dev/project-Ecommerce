@@ -3,5 +3,6 @@ export interface CardProps {
     name: string;
     image: string;
     price: number;
-    rating: number
+    rating: number;
+    desc: string; 
 }

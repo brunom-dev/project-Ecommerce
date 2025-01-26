@@ -15,7 +15,7 @@ export function Home() {
 
 
                 {
-                    produtos.map(({id, name, image, rating, price}:CardProps) => (
+                    produtos.map(({id, name, image, rating, price, desc}:CardProps) => (
                         <Card 
                             key={id}
                             id={id}
@@ -23,6 +23,7 @@ export function Home() {
                             price={price}
                             image={image}
                             rating={rating}
+                            desc={desc}
                         />
                     ))
                 }

@@ -18,9 +18,9 @@ export function Card({id, name, price, rating, image}: CardProps) {
                 <p className="font-bold text-xl">
                     {price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
                 </p>
-                
+
                 <Link to={`/products/${id}`}>
-                    <button className="mt-2 px-2 py-3 w-full bg-sky-400 text-white font-semibold text-lg rounded-xl hover:scale-95 transition-all duration-200">
+                    <button className="mt-2 px-2 py-3 w-full bg-sky-400 text-white font-semibold text-lg rounded-xl hover:scale-95 transition-all duration-200" >
                     Comprar agora
                     </button>
                 </Link>
