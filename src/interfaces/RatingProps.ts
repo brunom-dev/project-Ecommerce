@@ -1,3 +1,3 @@
 export interface RatingProps {
-    stars: number
+    stars: number | undefined;
 }

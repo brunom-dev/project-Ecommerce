@@ -4,13 +4,14 @@
     width: 250px;
     border-radius: 15px;
     padding: 15px;
-    outline:  2px solid #dcdcdc;
-    transition: .2s; 
+    outline:  0px solid #38bdf8;
+    transition: .2s ease-in-out; 
+    background-color: #fff;
 }
 
 .card:hover {
     transform: scale(1.01);
-    outline:  4px solid #dcdcdc;
+    outline:  4px solid #38bdf8;
 }
 
 .cardTop {
