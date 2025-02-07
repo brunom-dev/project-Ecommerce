@@ -6,12 +6,9 @@ import { Rating } from '../../components/Rating/index';
 
 import produtos from '../../assets/dados/index';
 import Styles from "./products.module.css"
-<<<<<<< HEAD
 import { CartProps } from "../../interfaces/CartProps";
 import { useContextCart } from "../../context/CartContext";
 import { Cart } from "../../components/Cart";
-=======
->>>>>>> dfc5de60722f968c7f3c930d0aae769f6c501c43
 
 
 export function Products() {
@@ -22,16 +19,11 @@ export function Products() {
         return produto.id == Number(params.id)
     })
     
-<<<<<<< HEAD
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
-=======
-    const [isExpanded, setIsExpanded] = useState(false);
->>>>>>> dfc5de60722f968c7f3c930d0aae769f6c501c43
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
     };
-<<<<<<< HEAD
 
     const cart:CartProps = useContextCart()
 
@@ -42,11 +34,6 @@ export function Products() {
                 <Cart />
             </div>
 
-=======
-
-    return(
-        <section className={Styles.container}>
->>>>>>> dfc5de60722f968c7f3c930d0aae769f6c501c43
             <div className={Styles.card}>
                 <div  className={Styles['image-card']}>
                     <img src={produto?.image} alt=""/>
@@ -89,7 +76,6 @@ export function Products() {
                             Comprar
                         </button>
 
-<<<<<<< HEAD
                         <button className="mt-2 px-2 py-3 w-4/4 bg-orange-400 text-white font-semibold text-base rounded-xl hover:scale-95 transition-all duration-200"
                             onClick={() => {
                                 cart.addCart({
@@ -100,9 +86,6 @@ export function Products() {
                             }
                             }
                         >
-=======
-                        <button className="mt-2 px-2 py-3 w-4/4 bg-orange-400 text-white font-semibold text-base rounded-xl hover:scale-95 transition-all duration-200">
->>>>>>> dfc5de60722f968c7f3c930d0aae769f6c501c43
                             Add carrinho
                         </button>
                     </div>
