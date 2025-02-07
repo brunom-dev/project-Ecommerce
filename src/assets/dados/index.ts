@@ -20,16 +20,14 @@ const produtos: CardProps[] = [
       "name": "Combo Gamer Meetion",
       "image": produto1,
       "rating": 4,
-      "price": 249.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 4000
     },
     {
       "id": 2,
       "name": "Msi GeFore Gtx 1650",
       "image": produto2,
       "rating": 5,
-      "price": 1349.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 20000
     },
     {
       "id": 3,
@@ -44,72 +42,63 @@ const produtos: CardProps[] = [
       "name": "Cadeira Gamer Frizzi",
       "image": produto4,
       "rating": 3,
-      "price": 699.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 17500
     },
     {
       "id": 5,
       "name": "iPhone 14 Pro Max 512GB",
       "image": produto5,
       "rating": 5,
-      "price": 3500,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 115000
     },
     {
       "id": 6,
       "name": "Samsung Galaxy S23 Ultra 1TB",
       "image": produto6,
       "rating": 5,
-      "price": 2850.00,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 110000
     },
     {
       "id": 7,
       "name": "Asus Rog Phone 3 Gamer",
       "image": produto7,
       "rating": 4,
-      "price": 4499.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 65000
     },
     {
       "id": 8,
       "name": "Xiaomi 13 Ultra",
       "image": produto8,
       "rating": 4,
-      "price": 1899.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 80500
     },
     {
       "id": 9,
       "name": "Xbox Series X",
       "image": produto9,
       "rating": 5,
-      "price": 1399.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 45000
     },
     {
       "id": 10,
       "name": "Racingwheel GT480 Ferrari",
       "image": produto10,
       "rating": 5,
-      "price": 1200,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 14000
     },
     {
       "id": 11,
       "name": "PlayStation 5",
       "image": produto11,
       "rating": 5,
-      "price": 5199.99,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 54000
     },
     {
       "id": 12,
       "name": "Gaming Desktop RTX 3090Ti",
       "image":  produto12,
       "rating": 5,
-      "price": 3199,
-      "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
+      "price": 450000
     }
 ]
 

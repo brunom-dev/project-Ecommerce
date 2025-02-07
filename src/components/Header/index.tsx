@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 export function Header() {
     return(
+<<<<<<< HEAD
         <Navbar variant="dark" expand="lg" className="shadow bg-sky-500">
             <Container className='p-4'>
                 <Navbar.Brand>
@@ -26,6 +27,17 @@ export function Header() {
                 </Navbar.Collapse>
             </Container>
       </Navbar>
+=======
+        <header className="flex justify-evenly py-12 bg-sky-600 text-white">
+            <h2 className="font-bold text-3xl">Web Comercio</h2>
+
+            <ul className="flex gap-10 text-2xl font-semibold">
+                <Link to={"/"}>Inicio</Link>
+                <Link to={"/products"}>Produtos</Link>                
+                <a href="#">Contato</a>
+            </ul>
+        </header>
+>>>>>>> dfc5de60722f968c7f3c930d0aae769f6c501c43
     )
 }
 
