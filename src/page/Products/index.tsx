@@ -6,6 +6,9 @@ import { Rating } from '../../components/Rating/index';
 
 import produtos from '../../assets/dados/index';
 import Styles from "./products.module.css"
+import { CartProps } from "../../interfaces/CartProps";
+import { useContextCart } from "../../context/CartContext";
+import { Cart } from "../../components/Cart";
 
 
 export function Products() {
@@ -22,8 +25,15 @@ export function Products() {
         setIsExpanded(!isExpanded);
     };
 
+    const cart:CartProps = useContextCart()
+
     return(
         <section className={Styles.container}>
+
+            <div style={{position: "fixed", bottom: "0", right: "0"}}>
+                <Cart />
+            </div>
+
             <div className={Styles.card}>
                 <div  className={Styles['image-card']}>
                     <img src={produto?.image} alt=""/>
@@ -66,7 +76,16 @@ export function Products() {
                             Comprar
                         </button>
 
-                        <button className="mt-2 px-2 py-3 w-4/4 bg-orange-400 text-white font-semibold text-base rounded-xl hover:scale-95 transition-all duration-200">
+                        <button className="mt-2 px-2 py-3 w-4/4 bg-orange-400 text-white font-semibold text-base rounded-xl hover:scale-95 transition-all duration-200"
+                            onClick={() => {
+                                cart.addCart({
+                                    id: produto?.id,
+                                    name: produto?.name ,
+                                    price: produto?.price,
+                                })
+                            }
+                            }
+                        >
                             Add carrinho
                         </button>
                     </div>

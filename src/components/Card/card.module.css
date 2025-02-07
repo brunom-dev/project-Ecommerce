@@ -1,7 +1,7 @@
 .card {
     display: inline-flex;
     flex-direction: column;
-    width: 250px;
+    width: 80%;
     border-radius: 15px;
     padding: 15px;
     outline:  0px solid #38bdf8;
@@ -9,10 +9,20 @@
     background-color: #fff;
 }
 
-.card:hover {
-    transform: scale(1.01);
-    outline:  4px solid #38bdf8;
+@media screen and (min-width: 768px) {
+
+
+    .card {
+        width: 250px;
+    }
+
+    .card:hover {
+        transform: scale(1.01);
+        outline:  4px solid #38bdf8;
+    }
 }
+
+
 
 .cardTop {
     display: flex;

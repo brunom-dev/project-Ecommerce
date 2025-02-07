@@ -1,21 +1,19 @@
 import { Card } from "../../components/Card"
 import { CardProps } from "../../interfaces/CardProps"
-import { useContextCart } from '../../context/CartContext';
-import { CartProps } from "../../interfaces/CartProps";
-import produtos from "../../assets/dados/index"
+import { Cart } from '../../components/Cart/index';
 
+import produtos from "../../assets/dados/index"
 
 export function Home() {
 
-    const cart:CartProps = useContextCart()
-
     return(
         <>
-            <h1 className="text-5xl font-medium mt-10 text-center">Conheça nossos produtos</h1>
+            <h1 className="md:text-5xl text-3xl font-medium mt-10 text-center">Conheça nossos produtos</h1>
 
-            <h1 className="text-5xl font-medium mt-10 text-center">Itens no carrinho: {cart.qtdProducts}</h1>
-
-            <main className="flex gap-8 flex-wrap px-8 mt-10 justify-center">
+            <main className="relative flex gap-8 flex-wrap px-8 mt-10 justify-center">
+                <div style={{position: "fixed", bottom: "0", right: "0", zIndex: 99999999}}>
+                    <Cart />
+                </div>
 
                 {
                     produtos.map(({id, name, image, rating, price, desc}:CardProps) => (
@@ -29,7 +27,7 @@ export function Home() {
                             desc={desc}
                         />
                     ))
-                }
+                }      
 
             </main>
         </>

@@ -4,7 +4,7 @@ import { CardProps } from "../../interfaces/CardProps";
 import { Link } from "react-router-dom";
 
 import { useContextCart } from '../../context/CartContext';
-import { CartProps, product } from "../../interfaces/CartProps";
+import { CartProps } from "../../interfaces/CartProps";
 
 export function Card({id, name, price, rating, image}: CardProps) {
 
@@ -19,6 +19,7 @@ export function Card({id, name, price, rating, image}: CardProps) {
             <div className={styles.cardBottom}>
                 <p className="font-medium uppercase overflow-hidden whitespace-nowrap truncate">{name}</p>
                 <Rating stars={rating}/>
+                
                 
                 <p className="font-bold text-xl">
                     {price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}

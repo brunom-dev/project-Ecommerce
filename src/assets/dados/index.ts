@@ -20,7 +20,7 @@ const produtos: CardProps[] = [
       "name": "Combo Gamer Meetion",
       "image": produto1,
       "rating": 4,
-      "price": 4000,
+      "price": 249.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -28,7 +28,7 @@ const produtos: CardProps[] = [
       "name": "Msi GeFore Gtx 1650",
       "image": produto2,
       "rating": 5,
-      "price": 2000,
+      "price": 1349.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -44,7 +44,7 @@ const produtos: CardProps[] = [
       "name": "Cadeira Gamer Frizzi",
       "image": produto4,
       "rating": 3,
-      "price": 17500,
+      "price": 699.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -52,7 +52,7 @@ const produtos: CardProps[] = [
       "name": "iPhone 14 Pro Max 512GB",
       "image": produto5,
       "rating": 5,
-      "price": 115000,
+      "price": 3500,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -60,7 +60,7 @@ const produtos: CardProps[] = [
       "name": "Samsung Galaxy S23 Ultra 1TB",
       "image": produto6,
       "rating": 5,
-      "price": 110000,
+      "price": 2850.00,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -68,7 +68,7 @@ const produtos: CardProps[] = [
       "name": "Asus Rog Phone 3 Gamer",
       "image": produto7,
       "rating": 4,
-      "price": 65000,
+      "price": 4499.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -76,7 +76,7 @@ const produtos: CardProps[] = [
       "name": "Xiaomi 13 Ultra",
       "image": produto8,
       "rating": 4,
-      "price": 80500,
+      "price": 1899.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -84,7 +84,7 @@ const produtos: CardProps[] = [
       "name": "Xbox Series X",
       "image": produto9,
       "rating": 5,
-      "price": 45000,
+      "price": 1399.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -92,7 +92,7 @@ const produtos: CardProps[] = [
       "name": "Racingwheel GT480 Ferrari",
       "image": produto10,
       "rating": 5,
-      "price": 14000,
+      "price": 1200,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -100,7 +100,7 @@ const produtos: CardProps[] = [
       "name": "PlayStation 5",
       "image": produto11,
       "rating": 5,
-      "price": 54000,
+      "price": 5199.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {
@@ -108,7 +108,7 @@ const produtos: CardProps[] = [
       "name": "Gaming Desktop RTX 3090Ti",
       "image":  produto12,
       "rating": 5,
-      "price": 450000,
+      "price": 3199,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     }
 ]
