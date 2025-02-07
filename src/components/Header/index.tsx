@@ -18,10 +18,21 @@ export function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className='text-white'>
                     <Nav className="ms-auto">
-                    <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Home</Nav.Link>
-                    <Nav.Link href="#about" className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Sobre</Nav.Link>
-                    <Nav.Link href="#produ" className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Produtos</Nav.Link>
-                    <Nav.Link href="#conta" className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Contato</Nav.Link>
+                        <Link to={"/"} className='text-decoration-none'>
+                            <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Home</Nav.Link>
+                        </Link>
+                        
+                        <Link to={"/"} className='text-decoration-none'>
+                            <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Produtos</Nav.Link>
+                        </Link>
+
+                        <Link to={"/"} className='text-decoration-none'>
+                            <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Sobre</Nav.Link>
+                        </Link>
+
+                        <Link to={"/"} className='text-decoration-none'>
+                            <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Contato</Nav.Link>
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
