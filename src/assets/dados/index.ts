@@ -28,7 +28,7 @@ const produtos: CardProps[] = [
       "name": "Msi GeFore Gtx 1650",
       "image": produto2,
       "rating": 5,
-      "price": 20000,
+      "price": 2000,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!"
     },
     {

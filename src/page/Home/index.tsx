@@ -1,18 +1,21 @@
 import { Card } from "../../components/Card"
 import { CardProps } from "../../interfaces/CardProps"
+import { useContextCart } from '../../context/CartContext';
+import { CartProps } from "../../interfaces/CartProps";
 import produtos from "../../assets/dados/index"
 
 
 export function Home() {
 
-    console.log(produtos)
+    const cart:CartProps = useContextCart()
 
     return(
         <>
             <h1 className="text-5xl font-medium mt-10 text-center">Conheça nossos produtos</h1>
 
-            <main className="flex gap-8 flex-wrap px-8 mt-10 justify-center">
+            <h1 className="text-5xl font-medium mt-10 text-center">Itens no carrinho: {cart.qtdProducts}</h1>
 
+            <main className="flex gap-8 flex-wrap px-8 mt-10 justify-center">
 
                 {
                     produtos.map(({id, name, image, rating, price, desc}:CardProps) => (
