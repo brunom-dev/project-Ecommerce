@@ -29,13 +29,14 @@ export function Card({id, name, price, rating, image}: CardProps) {
                     <button className="mt-2 px-2 py-3 w-full bg-sky-400 text-white font-semibold text-lg rounded-xl hover:scale-95 transition-all duration-200" >
                     Comprar agora
                     </button>
-                </Link>
+                </Link> 
 
                 <button className="mt-2 px-2 py-3 w-full bg-orange-400 text-white font-semibold text-lg rounded-xl hover:scale-95 transition-all duration-200" onClick={() => {
                         cart.addCart({
                             id: id,
                             name: name ,
                             price: price,
+                            image: image
                         })
                     }
                     }>
