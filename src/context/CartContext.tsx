@@ -13,7 +13,7 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
         qtdProducts: numberCart,
         products: products,
         
-        addCart({id, name, price}: product) {
+        addCart({id, name, price, image}: product) {
 
 
             const exist = products.some(product => product.id === id);
@@ -38,7 +38,8 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
                     id: id,
                     name: name,
                     price: price,
-                    qtd: 1
+                    qtd: 1,
+                    image: image
                 }])
 
 

@@ -10,5 +10,6 @@ export type product = {
     name: string;
     price: number;
     qtd: number;
+    image: string;
 }
 

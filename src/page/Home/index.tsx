@@ -1,18 +1,23 @@
 import { Card } from "../../components/Card"
 import { CardProps } from "../../interfaces/CardProps"
-import { Cart } from '../../components/Cart/index';
+import { CartFloat } from '../../components/Cart/cartFloat';
 
 import produtos from "../../assets/dados/index"
 
 export function Home() {
 
     return(
-        <>
-            <h1 className="md:text-5xl text-3xl font-medium mt-10 text-center">Conheça nossos produtos</h1>
+        <section className="relative">
+
+            <h1 className="md:text-5xl text-3xl font-medium pt-10 text-center">Conheça nossos produtos</h1>
+
 
             <main className="relative flex gap-8 flex-wrap px-8 mt-10 justify-center">
+
+
+
                 <div style={{position: "fixed", bottom: "0", right: "0", zIndex: 99999999}}>
-                    <Cart />
+                    <CartFloat />
                 </div>
 
                 {
@@ -30,6 +35,6 @@ export function Home() {
                 }      
 
             </main>
-        </>
+        </section>
     )
 }
