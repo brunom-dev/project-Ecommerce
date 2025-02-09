@@ -53,7 +53,7 @@ export function Cart() {
                     </div>
 
                     <div className='sm:w-auto w-3/4'>
-                        <button className='bg-red-600 text-white py-1 px-3 rounded-lg inline-flex gap-2 font-bold w-full flex justify-center active:scale-95 transition-all duration-200'><Trash size={20}/> Remover</button>
+                        <button className='bg-red-600 text-white py-1 px-3 rounded-lg inline-flex gap-2 font-bold w-full flex justify-center active:scale-95 transition-all duration-200' onClick={() => cart.removeCart(product)}><Trash size={20}/> Remover</button>
                     </div> 
                 </section>
             ))

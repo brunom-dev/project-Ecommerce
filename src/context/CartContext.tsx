@@ -14,8 +14,6 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
         products: products,
         
         addCart({id, name, price, image}: product) {
-
-
             const exist = products.some(product => product.id === id);
             
             if (exist) {
@@ -46,8 +44,21 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
                 setNumberCart(numberCart + 1);
             }
 
-        }
+        },
 
+        removeCart({id}: product) {
+            setProducts((prevProducts) => {
+                const newProducts = prevProducts.filter((product) => {
+                    if (product.id !== id) {
+                        return product
+                    } 
+                })
+
+                return newProducts
+            })
+
+            setNumberCart(numberCart - 1);
+        }
 
     }
 
