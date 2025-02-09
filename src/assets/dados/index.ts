@@ -13,6 +13,9 @@ import produto9 from "../images/products/product-12.png"
 import produto10 from "../images/products/product-13.png"
 import produto11 from "../images/products/product-14.png"
 import produto12 from "../images/products/product-15.png"
+import produto13 from "../images/products/product-16.webp"
+import produto14 from "../images/products/product-17.webp"
+import produto15 from "../images/products/product-18.webp"
 
 const produtos: CardProps[] = [
     {
@@ -110,6 +113,32 @@ const produtos: CardProps[] = [
       "rating": 5,
       "price": 2279.99,
       "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos! "
+    },
+    {
+        "id": 13,
+        "name": "Alan Wake 2",
+        "image":  produto13,
+        "rating": 5,
+        "price": 359.90,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos! "
+      }
+
+      ,
+    {
+        "id": 14,
+        "name": "Resident Evil 4 Remake",
+        "image":  produto14,
+        "rating": 4,
+        "price": 179.90,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos! "
+    },
+    {
+        "id": 15,
+        "name": "Notebook Dell Inspiron",
+        "image":  produto15,
+        "rating": 4.5,
+        "price": 3579.90,
+        "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est repudiandae, vitae minus nemo culpa deleniti ratione possimus accusantium. Sunt ad quod maiores pariatur soluta accusantium eaque ipsum quis odio eos! "
     }
 ]
 
