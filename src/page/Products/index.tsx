@@ -8,7 +8,7 @@ import produtos from '../../assets/dados/index';
 import Styles from "./products.module.css"
 import { CartProps } from "../../interfaces/CartProps";
 import { useContextCart } from "../../context/CartContext";
-import { Cart } from "../../components/Cart";
+import { CartFloat } from "../../components/Cart/cartFloat";
 
 
 export function Products() {
@@ -31,7 +31,7 @@ export function Products() {
         <section className={Styles.container}>
 
             <div style={{position: "fixed", bottom: "0", right: "0"}}>
-                <Cart />
+                <CartFloat />
             </div>
 
             <div className={Styles.card}>
@@ -82,6 +82,7 @@ export function Products() {
                                     id: produto?.id,
                                     name: produto?.name ,
                                     price: produto?.price,
+                                    image: produto?.image
                                 })
                             }
                             }
