@@ -14,7 +14,7 @@ import { CartFloat } from "../../components/Cart/cartFloat";
 export function Products() {
 
     const params = useParams()
-    
+
     const produto = produtos.find((produto) => {
         return produto.id == Number(params.id)
     })
@@ -72,11 +72,11 @@ export function Products() {
                     
 
                     <div className="flex flex-col">
-                        <button className="mt-5 px-2 py-3 w-4/4 bg-sky-400 text-white font-semibold text-base rounded-xl hover:scale-95 transition-all duration-200 " >
+                        <button className="mt-5 px-2 py-3 w-4/4 bg-sky-400 text-white font-semibold text-base rounded-xl md:hover:scale-95 active:scale-105 transition-all duration-200 " >
                             Comprar
                         </button>
 
-                        <button className="mt-2 px-2 py-3 w-4/4 bg-orange-400 text-white font-semibold text-base rounded-xl hover:scale-95 transition-all duration-200"
+                        <button className="mt-2 px-2 py-3 w-4/4 bg-orange-400 text-white font-semibold text-base rounded-xl md:hover:scale-95 active:scale-105 transition-all duration-200"
                             onClick={() => {
                                 cart.addCart({
                                     id: produto?.id,

@@ -2,8 +2,9 @@
 export interface CartProps {
     products: product[];
     qtdProducts: number;
+    totalCart:number;
     addCart(cart: object): void;
-    removeCart(cart: object): void;
+    removeCart(id: number): void;
 }
 
 export type product = {

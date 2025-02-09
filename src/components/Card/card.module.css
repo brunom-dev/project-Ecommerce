@@ -28,7 +28,6 @@
     display: flex;
     justify-content: center;
     background: #000;
-    width: 80%;
     align-self: center;
 }
 
@@ -40,7 +39,7 @@
 
 
 .cardTop img {
-    width: 100%;
-    object-fit: cover;
+    height: 170px;
+    object-fit: fill;
     object-position: center;
 }
