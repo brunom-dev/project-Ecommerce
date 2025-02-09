@@ -22,8 +22,8 @@ export function Header() {
                             <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Home</Nav.Link>
                         </Link>
                         
-                        <Link to={"/"} className='text-decoration-none'>
-                            <Nav.Link href="#home"  className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Produtos</Nav.Link>
+                        <Link to={"/cart"} className='text-decoration-none'>
+                            <Nav.Link href="#cart" className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Meu Carrinho</Nav.Link>
                         </Link>
 
                         <Link to={"/"} className='text-decoration-none'>

@@ -2,7 +2,7 @@ import { createContext , useContext, useState } from "react";
 import { CartProps, product } from '../interfaces/CartProps'; 
 import { toast } from "react-toastify";
 
-export const CartContext = createContext({});
+export const CartContext = createContext({} as CartProps);
 
 export const CartProvider = ({children}: {children: React.ReactNode}) => {
 
@@ -81,7 +81,7 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
 }
 
 
-export const useContextCart = () => {
+export const useContextCart = (): CartProps => {
     const context:CartProps = useContext(CartContext);
     if (!context) {
       throw new Error("useAuth deve ser usado dentro de um AuthProvider");
