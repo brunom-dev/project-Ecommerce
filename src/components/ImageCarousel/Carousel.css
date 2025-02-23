@@ -1,0 +1,47 @@
+
+.carousel {
+    width: 90%;
+    margin: 60px 0 40px;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1; 
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: auto; 
+        max-height: 300px; 
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}

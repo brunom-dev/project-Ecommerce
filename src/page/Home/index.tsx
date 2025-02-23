@@ -1,6 +1,7 @@
 import { Card } from "../../components/Card"
 import { CardProps } from "../../interfaces/CardProps"
 import { CartFloat } from '../../components/Cart/cartFloat';
+import { ImageCarousel } from "../../components/ImageCarousel/index"
 
 import produtos from "../../assets/dados/index"
 
@@ -8,6 +9,11 @@ export function Home() {
 
     return(
         <section className="relative">
+
+            <div className="flex justify-center items-center">
+                <ImageCarousel />
+                
+            </div>
 
             <h1 className="md:text-5xl text-3xl font-medium pt-10 text-center">Conheça nossos produtos</h1>
 
