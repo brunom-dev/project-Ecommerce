@@ -23,14 +23,31 @@ export function Cart() {
             </div>
 
             <h1 className='text-center mt-5 mb-4 font-bold '>Carrinho de Compras</h1>
+           
 
-            <div className='mt-2'>
-                <p className='w-full font-bold text-right px-5'>Total: {cart.totalCart.toLocaleString('pt-br', {style: "currency", currency: 'BRL'})}</p>
-                <hr />
+
+            <div className='mt-4'>
+
+                <div className='flex relative flex-col-reverse'>
+
+                    <div className='md:w-3/12 w-full bottom-0 flex md:absolute'>   
+                        <button 
+                            className=' w-full bg-green-400 py-2 text-white text-xl font-semibold xl:rounded-e-xl rounded-xl disabled:bg-gray-400 disabled:hover:bg-gray-400 active:bg-green-600 md:hover:bg-green-600 transition-all' 
+                            disabled={products.length === 0}
+                            onClick={() => cart.finishCart(cart)}
+                        >
+                            Finalizar compra
+                        </button>
+                    </div>
+                
+                    <p className='w-full font-bold text-right px-5 md:align-self-end md:mb-0'>Total: {cart.totalCart.toLocaleString('pt-br', {style: "currency", currency: 'BRL'})}</p>
+                </div>
+
+                <hr className='border-black border-4'/>
             </div>
 
             {products.length > 0 ?
-                products.map((product) => (
+                products.map((product) => ( 
                     <section className="flex justify-around items-center border-4 border-gray-200 md:hover:border-gray-500 transition-all duration-400 rounded-2xl py-3 px-2 md:flex-row flex-col" key={product.id}>
                         <div className='h-100'>
                             <img src={product.image} alt="miniatura do produto" className='md:h-24 h-0' />
@@ -64,6 +81,7 @@ export function Cart() {
                             <button className='bg-red-600 text-white py-1 px-3 rounded-lg inline-flex gap-2 font-bold w-full flex justify-center active:scale-95 transition-all duration-200' onClick={() => cart.removeCart(product.id)}><Trash size={20}/> Remover</button>
                         </div> 
                     </section>
+
                 ))
             :
                 <div className='flex justify-center flex-col items-center w-full '>
@@ -71,6 +89,8 @@ export function Cart() {
                     <p className='font-semibold text-2xl text-center'>Você não possui itens no carrinho.</p>
                 </div>    
              }
+
+
 
         </div>
     )

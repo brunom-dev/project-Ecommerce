@@ -69,6 +69,19 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
             })
 
             setNumberCart(numberCart - 1);
+        },
+
+        finishCart(cart: CartProps) {
+            let cartItems = "Ola, estou interessado em alguns produtos. \n\n";
+            cartItems += cart.products.map( (item) => {
+                return (
+                    `| *${item.name}* - Quantidade: (${item.qtd}) - Preço: *R$${item.price}* |`
+                )
+            }).join("\n");
+        
+            const mensagge = encodeURIComponent(cartItems);
+            const phone = +5588988337938;
+            window.open(`https://wa.me/${phone}?text=${mensagge}`, "_blank");
         }
 
     }
