@@ -72,13 +72,14 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
         },
 
         finishCart(cart: CartProps) {
-            let cartItems = "Ola, estou interessado em alguns produtos. \n\n";
+            let cartItems = "Ola, estou interessado em alguns produtos: \n\n";
             cartItems += cart.products.map( (item) => {
                 return (
-                    `| *${item.name}* - Quantidade: (${item.qtd}) - Preço: *R$${item.price}* |`
+                    `*${item.name}*\n\tQuantidade: *(${item.qtd})*\n\tPreço: *R$ ${item.price}*\n\tSubtotal: *R$ ${item.qtd * item.price}*`
                 )
-            }).join("\n");
+            }).join("\n\n");
         
+            cartItems += `\n\n *Total: R$ ${cart.totalCart}*`    
             const mensagge = encodeURIComponent(cartItems);
             const phone = +5588988337938;
             window.open(`https://wa.me/${phone}?text=${mensagge}`, "_blank");
