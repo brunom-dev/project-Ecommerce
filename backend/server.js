@@ -1,10 +1,14 @@
 import express from 'express';
+import cors from 'cors'
 import { databasePg } from './database.js'
+
 
 const application = express();
 const PORT = 3000;
 
 application.use(express.json());
+application.use(cors());
+
 const database = new databasePg();
 
 application.get("/produtos", async (request, response) => {
