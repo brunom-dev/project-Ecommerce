@@ -1,3 +1,5 @@
+import { API } from "../../../services/api"
+
 import { useState } from 'react'
 import { toast } from 'react-toastify';
 
@@ -17,17 +19,15 @@ export function Register() {
   
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:3000/produtos", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, image, price, rating, desc }),
-        });
-  
-        if (!response.ok) {
-          throw new Error("Erro ao cadastrar produto.");
-        }
+        const response = await API.post("/produtos", {
+            name: name,
+            desc: desc,
+            image: image,
+            price: price,
+            rating: rating
+        })
+        
+        console.log(`Produto cadastrado: ${response.data}`)
   
         toast.success("Produto cadastrado");
         setName("");
@@ -36,7 +36,7 @@ export function Register() {
         setPrice(0);
       } catch (error) {
         toast.error("Erro ao cadastrar.");
-        console.log(error);
+        console.log("Erro do cadastro: ", error);
       } finally {
         setLoading(false);
       }
@@ -75,6 +75,7 @@ export function Register() {
                     value={price}
                     onChange={(e) => setPrice(Number(e.target.value))}
                     className="w-full p-3 border border-gray-300 rounded-md"
+                    step="0.01"
                     required
                 />
 

@@ -1,3 +1,5 @@
+import { API } from "../../../services/api"
+
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -19,24 +21,17 @@ export function Update() {
 
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:3000/produtos/${id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ name, image, price, rating, desc }),
-            });
+            const response = await API.put(`/produtos/${id}`, {
+                name: name,
+                desc: desc,
+                image: image,
+                price: price,
+                rating: rating
+            })
 
-            if (!response.ok) {
-                throw new Error("Erro ao atualizar produto.");
-            }
+            console.log("Produto atualizado: ", response.data);
 
-            toast.success("Produto atualizado com sucesso!");
-            setId("");
-            setName("");
-            setDesc("");
-            setImage("");
-            setPrice("");
+            toast.success("Produto atualizado");
         } catch (error) {
             toast.error("Erro ao atualizar.");
             console.error(error);

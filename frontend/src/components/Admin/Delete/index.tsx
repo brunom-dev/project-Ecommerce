@@ -1,3 +1,5 @@
+import { API } from "../../../services/api"
+
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -13,15 +15,10 @@ export function Delete() {
 
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:3000/produtos/${id}`, {
-                method: "DELETE",
-            });
+            const response = await API.delete(`/produtos/${id}`)
 
-            if (!response.ok) {
-                throw new Error("Erro ao deletar produto.");
-            }
-
-            toast.success("Produto deletado com sucesso!");
+            console.log("Produto deletado", response.data);
+            toast.success("Produto deletado");
             setId("");
         } catch (error) {
             toast.error("Erro ao deletar o produto.");
