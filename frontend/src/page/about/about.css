@@ -1,0 +1,20 @@
+.content-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1; 
+    position: relative; 
+}
+.content-text h1{
+    position: absolute;
+    top: 0;
+    color: rgb(63, 144, 243);
+}
+.text{
+    margin-top: 100px;
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+}

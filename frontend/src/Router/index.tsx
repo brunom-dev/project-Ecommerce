@@ -8,6 +8,7 @@ import { NotFound } from "../page/NotFound"
 import { Cart } from "../page/Cart"
 import { Admin } from "../page/Admin"
 import { Login } from "../page/Login"
+import About from "../page/about/about"
 
 
 export const Router = createBrowserRouter([
@@ -28,7 +29,10 @@ export const Router = createBrowserRouter([
                 path: `/products/:id`,
                 element: <Products />
             },
-
+            {
+                path : '/sobre',
+                element: <About/>
+            },
             {
                 path: '/login',
                 element: <Login />
