@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth } from '../../auth/auth.ts'
+import { auth, isAuthenticated } from '../../auth/auth.ts'
 
 import Image from "../../assets/images/login/image-login.svg"
 import { toast } from "react-toastify";
@@ -12,6 +12,13 @@ export function Login() {
     const [error, setError] = useState<string | null>(null);
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (isAuthenticated()) {
+            navigate("/admin");
+        }
+    }, [navigate]);
+
 
     function handleLogin() {
 
