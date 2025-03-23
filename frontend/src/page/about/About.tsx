@@ -15,6 +15,6 @@ export default function About()
           <p>Entre em contato conosco para saber mais!</p>
       </section>
     </div>
-        
+         
     )
 }
