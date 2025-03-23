@@ -39,8 +39,8 @@ export function Login() {
     }
 
     return (
-            <div className="min-h-screen bg-gray-200 flex justify-center items-start">
-            <div className="bg-white p-8 rounded-lg w-8/12 mt-10">
+        <div className="min-h-screen bg-gray-200 flex justify-center items-start">
+            <div className="bg-white p-8 rounded-lg md:w-8/12 mt-10">
                 <div className="mb-2 flex justify-center">
                     <img
                         src={Image}
@@ -48,7 +48,7 @@ export function Login() {
                         className="w-36 h-36 object-cover"
                     />
                 </div>
-                <h2 className="text-3xl font-semibold text-center mb-6">
+                <h2 className="md:text-3xl text-2xl font-semibold text-center mb-6">
                     Acesso Administrativo
                 </h2>
 
@@ -73,18 +73,20 @@ export function Login() {
                 </div>
 
                 {error && (
-                    <p className="text-red-500 text-center mb-4 font-bold">{error}</p>
+                    <p className="text-red-500 text-center mb-4 font-bold">
+                        {error}
+                    </p>
                 )}
 
                 <div>
                     <button
-                        onClick={handleLogin} 
+                        onClick={handleLogin}
                         className="w-full p-3 bg-sky-500 text-white rounded-xl hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500"
                     >
                         Entrar
                     </button>
                 </div>
             </div>
-            </div>
+        </div>
     );
 }

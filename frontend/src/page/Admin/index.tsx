@@ -28,10 +28,10 @@ export function Admin() {
 
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-            <div className="w-full max-w-4xl flex justify-between items-center bg-white p-6 rounded-lg shadow-md mb-6">
+            <div className="w-full max-w-4xl flex md:justify-between md:gap-0 gap-2 justify-center items-center bg-white p-6 rounded-lg shadow-md mb-6 flex-wrap">
                 <div className="flex items-center gap-4">
                     <UserCircle size={50} className="text-sky-500" />
-                    <h2 className="text-3xl font-bold">
+                    <h2 className="md:text-3xl text-2xl font-bold">
                         Painel do Administrador
                     </h2>
                 </div>
