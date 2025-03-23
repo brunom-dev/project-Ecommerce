@@ -25,7 +25,7 @@ export function Header() {
 
                         <Nav.Link as={Link} to={"/"}   className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Sobre</Nav.Link>
 
-                        <Nav.Link as={Link} to={"/"} className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Contato</Nav.Link>
+                        <Nav.Link as={Link} to={"/admin"} className='text-white' style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}>Acesso Admin</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

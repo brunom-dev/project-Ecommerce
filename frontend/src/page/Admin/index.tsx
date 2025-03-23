@@ -6,6 +6,7 @@ import { UserCircle, LogOut } from "lucide-react";
 import { Register } from "../../components/Admin/Register"
 import { Update } from "../../components/Admin/Update"
 import { Delete } from "../../components/Admin/Delete"
+import { toast } from "react-toastify";
 
 
 export function Admin() {
@@ -19,6 +20,7 @@ export function Admin() {
 
     function handleLogout() {
         logout();
+        toast.success("Sessão encerrada")
         navigate("/login");
     }
 

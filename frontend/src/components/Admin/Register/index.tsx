@@ -6,7 +6,7 @@ export function Register() {
 
     const [name, setName] = useState<string>("");
     const [desc, setDesc] = useState<string>("");
-    const [image, setImage] = useState<string>("");
+    const [image, setImage] = useState<string>(""); 
     const [price, setPrice] = useState<number | "">();
     const [loading, setLoading] = useState<boolean>(false);
     const rating = 4.5;
