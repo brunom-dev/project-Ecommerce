@@ -3,7 +3,11 @@ import { prisma } from "./database.js";
 
 async function searchProducts() {
     try {
-        const products = await prisma.products.findMany();
+        const products = await prisma.products.findMany({
+            orderBy: {
+                id: "asc"
+            }
+        })
 
         if (products.length === 0) {
             return { status: 404, message: "Nenhum produto encontrado." };
