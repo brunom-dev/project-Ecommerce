@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px 30px;
+    min-height: 60.5vh;
 }
 
 .card {
