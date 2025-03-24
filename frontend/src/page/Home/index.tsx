@@ -1,18 +1,46 @@
-import { Card } from "../../components/Card"
-import { CardProps } from "../../interfaces/CardProps"
-import { CartFloat } from '../../components/Cart/cartFloat';
-import { ImageCarousel } from "../../components/ImageCarousel/index"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom"
 
-import produtos from "../../assets/dados/index"
+import { CartFloat } from '../../components/Cart/cartFloat';
+import { Card } from "../../components/Card"
+import { ImageCarousel } from "../../components/ImageCarousel/index"
+import { Loading } from "../../components/Loading"
+
+import { API } from "../../services/api";
+import { CardProps } from "../../interfaces/CardProps"
+
 
 export function Home() {
+
+    const [products, setProducts] = useState<CardProps[]>([])
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    
+    useEffect(() => {
+        async function buscarProdutos() {
+            
+            await API.get("/produtos")
+            .then((response) => {
+                const dados = response.data.data;
+                setProducts(dados);
+            })
+            .catch((erro) => {
+                console.log(erro)
+            })
+            .finally(() => setIsLoading(false))
+        }
+        buscarProdutos()
+    }, [])
+
+
+    function teste() {
+        console.log(products)
+    }
 
     return(
         <section className="relative">
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center w-full mx-auto" onClick={teste}>
                 <ImageCarousel />
-                
             </div>
 
             <h1 className="md:text-5xl text-3xl font-medium pt-10 text-center">Conheça nossos produtos</h1>
@@ -27,18 +55,27 @@ export function Home() {
                 </div>
 
                 {
-                    produtos.map(({id, name, image, rating, price, desc}:CardProps) => (
-                        <Card 
-                            key={id}
-                            id={id}
-                            name={name}
-                            price={price}
-                            image={image}
-                            rating={rating}
-                            desc={desc}
-                        />
-                    ))
-                }      
+                    isLoading ? (
+                        <Loading />
+                    ) : (
+                        products.length > 0 ? (
+                            products.map(({ id, name, image, rating, price, desc }: CardProps) => (
+                                <Link to={`/products/${id}`} style={{ color: '#000' }} key={id}>
+                                    <Card
+                                        id={id}
+                                        name={name}
+                                        price={price}
+                                        image={image}
+                                        rating={rating}
+                                        desc={desc}
+                                    />
+                                </Link>
+                            ))
+                        ) : (
+                            <p>Não há produtos disponíveis.</p>
+                        )
+                    )
+                }
 
             </main>
         </section>
