@@ -16,7 +16,7 @@ export function Cart() {
 
 
     return (
-        <div className="flex flex-col gap-3 md:px-8 px-3 ">
+        <div className="flex flex-col gap-3 md:px-8 px-3 min-h-screen">
 
             <div style={{position: "fixed", bottom: "0", right: "15px", zIndex: 99999999}}>
                 <CartFloat />

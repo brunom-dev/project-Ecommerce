@@ -37,7 +37,7 @@ export function Home() {
     }
 
     return(
-        <section className="relative">
+        <section className="relative min-h-screen">
 
             <div className="flex justify-center items-center w-full mx-auto" onClick={teste}>
                 <ImageCarousel />
@@ -72,7 +72,7 @@ export function Home() {
                                 </Link>
                             ))
                         ) : (
-                            <p>Não há produtos disponíveis.</p>
+                            <p className="font-bold text-2xl">Não há produtos disponíveis.</p>
                         )
                     )
                 }
