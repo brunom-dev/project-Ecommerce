@@ -43,7 +43,7 @@ export function Header() {
                     
                         <Nav.Link 
                             as={Link} 
-                            to={"/"} 
+                            to={"/sobre"} 
                             className='text-white' 
                             style={{fontWeight: "500", fontSize: "18px", padding: "10px 20px"}}
                             onClick={() => setExpanded(false)}
