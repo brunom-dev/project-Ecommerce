@@ -38,7 +38,7 @@ application.post("/produtos", async (request, response) => {
     return response.status(newProduct.status).json(newProduct)
 })
 
-application.put("/produtos/id:", async (request, response) => {
+application.put("/produtos/:id", async (request, response) => {
 
     const { id } = request.params;
 
