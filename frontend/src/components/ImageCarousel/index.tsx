@@ -14,9 +14,6 @@ export function ImageCarousel() {
                     src={image1}
                     alt="Primeira imagem"
                 />
-                {/*<Carousel.Caption>
-                    <h3>Nanda e Junior</h3>
-                </Carousel.Caption>*/}
             </Carousel.Item>
 
             <Carousel.Item>
@@ -25,9 +22,7 @@ export function ImageCarousel() {
                     src={image2}
                     alt="Segunda imagem"
                 />
-                {/*<Carousel.Caption>
-                    <h3>Nanda e Junior</h3>
-                </Carousel.Caption>*/}
+
             </Carousel.Item>
 
             <Carousel.Item>
@@ -36,9 +31,6 @@ export function ImageCarousel() {
                     src={image3}
                     alt="Terceira imagem"
                 />
-                {/*<Carousel.Caption>
-                    <h3>Nanda e Junior</h3>
-                </Carousel.Caption>*/}
             </Carousel.Item>
         </Carousel>
     );
