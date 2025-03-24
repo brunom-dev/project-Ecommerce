@@ -1,0 +1,25 @@
+.box-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+
+.loader-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 8px solid rgb(125, 184, 255);
+    border-top-color: #2d7eef;
+    animation: loader-circle 0.8s linear infinite;
+  }
+  
+  @keyframes loader-circle {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
