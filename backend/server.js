@@ -47,10 +47,10 @@ application.put("/produtos/:id", async (request, response) => {
     return response.status(newProduct.status).send(newProduct)
 })
 
-application.delete("/produtos/id:", async (request, response) => {
+application.delete("/produtos/:id", async (request, response) => {
     const { id } = request.params;
 
-    const result = await deleteItem(Number(id))
+    const result = await deleteProduct(Number(id))
 
     return response.status(result.status).send(result)
 })
