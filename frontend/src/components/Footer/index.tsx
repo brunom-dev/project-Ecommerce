@@ -1,8 +1,10 @@
 export default function Footer() {
     return (
-        <footer className="bg-blue-800 text-white text-center py-6 h-20 ">
-        <p>© {new Date().getFullYear()} Site Equipe 2. Todos os direitos reservados.</p>
-        
+        <footer className="bg-sky-600 text-white py-4 mt-5">
+            <div className="container mx-auto text-center">
+                <p className="text-lg font-bold">Tech Store</p>
+                <p className="text-sm mt-1 font-semibold">© 2025 Todos os direitos reservados.</p>
+            </div>
         </footer>
     )
 }
