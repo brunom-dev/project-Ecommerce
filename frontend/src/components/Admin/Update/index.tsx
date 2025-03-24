@@ -32,9 +32,31 @@ export function Update() {
             console.log("Produto atualizado: ", response.data);
 
             toast.success("Produto atualizado");
-        } catch (error) {
-            toast.error("Erro ao atualizar.");
-            console.error(error);
+        } catch (error: unknown) {
+        
+            if (typeof error === "object" && error !== null && "response" in error) {
+                const err = error as { response: { status: number; data?: unknown } };
+        
+                console.error("Erro do servidor:", err.response.status, err.response.data);
+        
+                switch (err.response.status) {
+                    case 400:
+                        toast.error("Requisição inválida.");
+                        break;
+                    case 401:
+                        toast.error("Não autorizado.");
+                        break;
+                    case 403:
+                        toast.error("Acesso proibido.");
+                        break;
+                    case 404:
+                        toast.error("Produto não encontrado.");
+                        break;
+                    case 500:
+                        toast.error("Erro interno do servidor.");
+                        break;
+                }
+            }
         } finally {
             setLoading(false);
         }
