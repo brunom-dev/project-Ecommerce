@@ -12,9 +12,11 @@ export function Card({id, name, price, rating, image}: CardProps) {
 
     return (
         <div className={styles.card} key={id}>
-            <div className={styles.cardTop}>
-                <img src={image} alt={name} />
-            </div>
+            <Link to={`/products/${id}`} className={styles.cardTop} >
+                <div>
+                    <img src={image} alt={name} />
+                </div>
+            </Link>
 
             <div className={styles.cardBottom}>
                 <p className="font-medium uppercase overflow-hidden whitespace-nowrap truncate">{name}</p>

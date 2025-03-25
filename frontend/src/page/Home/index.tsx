@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom"
 
 import { CartFloat } from '../../components/Cart/cartFloat';
 import { Card } from "../../components/Card"
@@ -60,16 +59,14 @@ export function Home() {
                     ) : (
                         products.length > 0 ? (
                             products.map(({ id, name, image, rating, price, desc }: CardProps) => (
-                                <Link to={`/products/${id}`} style={{ color: '#000' }} key={id}>
-                                    <Card
-                                        id={id}
-                                        name={name}
-                                        price={price}
-                                        image={image}
-                                        rating={rating}
-                                        desc={desc}
-                                    />
-                                </Link>
+                                <Card
+                                    id={id}
+                                    name={name}
+                                    price={price}
+                                    image={image}
+                                    rating={rating}
+                                    desc={desc}
+                                />
                             ))
                         ) : (
                             <p className="font-bold text-2xl">Não há produtos disponíveis.</p>
