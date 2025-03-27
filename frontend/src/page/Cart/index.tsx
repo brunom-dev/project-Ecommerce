@@ -4,6 +4,7 @@ import { CartFloat } from '../../components/Cart/cartFloat';
 import { Trash } from 'lucide-react';
 
 import emptyImage from "../../assets/images/empty.svg"
+import { toast } from 'react-toastify';
 
 export function Cart() {
 
@@ -34,7 +35,10 @@ export function Cart() {
                         <button 
                             className=' w-full bg-green-400 py-2 text-white text-xl font-semibold xl:rounded-e-xl rounded-xl disabled:bg-gray-400 disabled:hover:bg-gray-400 active:bg-green-600 md:hover:bg-green-600 transition-all' 
                             disabled={products.length === 0}
-                            onClick={() => cart.finishCart(cart)}
+                            onClick={() => {
+                                toast.success("Compra Finalizada!");
+                                cart.removeAllCart();
+                            }}
                         >
                             Finalizar compra
                         </button>

@@ -6,6 +6,7 @@ export interface CartProps {
     addCart(cart: object): void;
     removeCart(id: number): void;
     finishCart(cart: CartProps): void;
+    removeAllCart(): void
 }
 
 export type product = {

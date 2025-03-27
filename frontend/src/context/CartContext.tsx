@@ -83,6 +83,11 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
             const mensagge = encodeURIComponent(cartItems);
             const phone = +5588988337938;
             window.open(`https://wa.me/${phone}?text=${mensagge}`, "_blank");
+        },
+
+        removeAllCart() {
+            setProducts([]);
+            setNumberCart(0);
         }
 
     }
