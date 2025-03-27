@@ -10,6 +10,7 @@ body {
     align-items: center;
     padding: 15px 30px;
     min-height: 60.5vh;
+    position: relative;
 }
 
 .card {
@@ -58,7 +59,6 @@ body {
 .info-card .desc {
     width: 80%;
 }
-
 
 @media screen and (max-width:  850px ) {
     .card {

@@ -60,11 +60,12 @@ export function Products() {
             ) : product ? (
                 <div className={Styles.card}>
                     <div className={Styles["image-card"]}>
+
                         <img src={product.image} alt={product.name} />
                     </div>
 
                     <div className={Styles["info-card"]}>
-                        <h2>{product.name}</h2>
+                        <h2>{product.name} <span className="font-normal text-xl"> - ({product.id})</span></h2>
                         <div className={Styles.ratingContainer}>
                             ({product.rating.toFixed(1)})
                             <Rating stars={product.rating} />
