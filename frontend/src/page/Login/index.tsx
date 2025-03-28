@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 export function Login() {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    
+    const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
     const navigate = useNavigate();
@@ -19,11 +19,8 @@ export function Login() {
         }
     }, [navigate]);
 
-
     function handleLogin() {
-
         if (!username || !password) {
-
             setError('Preencha todos os campos');
             return;
         }
@@ -31,12 +28,16 @@ export function Login() {
         const result = auth(username, password);
 
         if (result) {
-            toast.success("Sessão iniciada")
+            toast.success("Sessão iniciada");
             navigate("/admin");
         } else {
-            setError('Acesso negado!')
+            setError('Acesso negado!');
         }
     }
+
+    const togglePasswordVisibility = () => {
+        setIsPasswordVisible(!isPasswordVisible);
+    };
 
     return (
         <div className="min-h-screen bg-gray-200 flex justify-center items-start">
@@ -62,14 +63,21 @@ export function Login() {
                     />
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-6 relative">
                     <input
-                        type="password"
+                        type={isPasswordVisible ? "text" : "password"}
                         placeholder="Senha"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500"
                     />
+                    <button
+                        type="button"
+                        onClick={togglePasswordVisibility}
+                        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-sky-500"
+                    >
+                        {isPasswordVisible ? "Ocultar" : "Revelar"}
+                    </button>
                 </div>
 
                 {error && (
