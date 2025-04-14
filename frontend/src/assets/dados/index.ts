@@ -109,7 +109,7 @@ const produtos : CardProps[] = [
     },
 
     {
-        "id": 15,
+        "id": 14,
         "name": "Notebook Ultrafino 15” Pro ",
         "image":"https://i.imgur.com/JR31HBh.png" ,
         "rating": 4.5,
@@ -118,7 +118,7 @@ const produtos : CardProps[] = [
     },
 
     {
-        "id": 16,
+        "id": 15,
         "name": "HD Externo 2TB USB 3.0 ",
         "image":"https://i.imgur.com/LQDpPZF.jpeg" ,
         "rating": 4.5,

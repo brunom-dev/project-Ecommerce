@@ -11,7 +11,7 @@ import { Loading } from "../../components/Loading";
 import { CartProps } from "../../interfaces/CartProps";
 import { useContextCart } from "../../context/CartContext";
 
-import { API } from "../../services/api";
+// import { API } from "../../services/api";
 import { CardProps } from "../../interfaces/CardProps"
 
 export function Products() {
@@ -21,22 +21,38 @@ export function Products() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        const buscarProduto = async () => {
+        // const buscarProduto = async () => {
 
-            await API.get(`/produtos/${params.id}`)
-            .then((response) => {
-                const dados = response.data.data;
-                setProduct(dados);
-            })
-            .catch((erro) => {
-                console.error(erro)
-            })
-            .finally(() => {
-                setIsLoading(false); 
-            })
+        //     await API.get(`/produtos/${params.id}`)
+        //     .then((response) => {
+        //         const dados = response.data.data;
+        //         setProduct(dados);
+        //     })
+        //     .catch((erro) => {
+        //         console.error(erro)
+        //     })
+        //     .finally(() => {
+        //         setIsLoading(false); 
+        //     })
+        // }
+
+        
+        const buscarProdutoLocal = () => {
+            const dadosSalvos = localStorage.getItem("@productsLocal");
+
+            const produtosSalvos: CardProps[] = dadosSalvos ? JSON.parse(dadosSalvos) : []
+
+            const produtoEncontrado = produtosSalvos.find(produto => produto.id === Number(params.id))
+
+            if (produtoEncontrado) {
+                setProduct(produtoEncontrado);
+                setIsLoading(false)
+            } else {
+                setIsLoading(false)
+            }
         }
 
-        buscarProduto()
+        buscarProdutoLocal()
     }, [])
 
     
