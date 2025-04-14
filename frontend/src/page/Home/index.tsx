@@ -5,9 +5,11 @@ import { Card } from "../../components/Card"
 import { ImageCarousel } from "../../components/ImageCarousel/index"
 import { Loading } from "../../components/Loading"
 
-import { API } from "../../services/api";
+// import { API } from "../../services/api";
+
 import { CardProps } from "../../interfaces/CardProps"
 
+import { produtos } from "../../assets/dados/"
 
 export function Home() {
 
@@ -17,19 +19,33 @@ export function Home() {
     const [searchText, setSearchText] = useState<string>("");
     
     useEffect(() => {
-        async function buscarProdutos() {
+        // async function buscarProdutosBD() {
             
-            await API.get("/produtos")
-            .then((response) => {
-                const dados = response.data.data;
-                setProducts(dados);
-            })
-            .catch((erro) => {
-                console.log(erro)
-            })
-            .finally(() => setIsLoading(false))
-        }
-        buscarProdutos()
+        //     await API.get("/produtos")
+        //     .then((response) => {
+        //         const dados = response.data.data;
+        //         setProducts(dados);
+        //     })
+        //     .catch((erro) => {
+        //         console.log(erro)
+        //     })
+        //     .finally(() => setIsLoading(false))
+        // }
+
+
+        function buscarProdutosLocal() {
+            const productsLocal = localStorage.getItem("productsLocal");
+
+            if (productsLocal !== null) {
+                return;
+            }    
+
+            localStorage.setItem("productsLocal", JSON.stringify(produtos));
+            setProducts(produtos);
+            setIsLoading(false);
+        }   
+
+        buscarProdutosLocal();
     }, [])
 
     useEffect(() => {
