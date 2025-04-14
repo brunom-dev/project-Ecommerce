@@ -34,13 +34,17 @@ export function Home() {
 
 
         function buscarProdutosLocal() {
-            const productsLocal = localStorage.getItem("productsLocal");
+            const productsLocal = localStorage.getItem("@productsLocal");
 
             if (productsLocal !== null) {
+                setProducts(
+                    JSON.parse(productsLocal)
+                );
+                setIsLoading(false);
                 return;
             }    
 
-            localStorage.setItem("productsLocal", JSON.stringify(produtos));
+            localStorage.setItem("@productsLocal", JSON.stringify(produtos));
             setProducts(produtos);
             setIsLoading(false);
         }   

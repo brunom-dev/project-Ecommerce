@@ -1,7 +1,8 @@
-import { API } from "../../../services/api"
+// import { API } from "../../../services/api"
 
 import { useState } from 'react'
 import { toast } from 'react-toastify';
+import { CardProps } from "../../../interfaces/CardProps";
 
 
 export function Register() {
@@ -9,25 +10,45 @@ export function Register() {
     const [name, setName] = useState<string>("");
     const [desc, setDesc] = useState<string>("");
     const [image, setImage] = useState<string>(""); 
-    const [price, setPrice] = useState<number | "">();
+    const [price, setPrice] = useState<number>(0.01);
     const [loading, setLoading] = useState<boolean>(false);
     const rating = 4.5;
   
     const handleSubmit = async (event: React.FormEvent) => {
       event.preventDefault();
+
       if (!name.trim() || !desc.trim() || Number(price) <= 0 || !image) return;
   
       setLoading(true);
       try {
-        const response = await API.post("/produtos", {
+        // const response = await API.post("/produtos", {
+        //     name: name,
+        //     desc: desc,
+        //     image: image,
+        //     price: price,
+        //     rating: rating
+        // })
+
+
+        const productsCurrent = localStorage.getItem("@productsLocal");
+
+        const products: CardProps[] = productsCurrent ? JSON.parse(productsCurrent) : [];
+
+        const newProduct = {
+            id: products.length + 1,
             name: name,
             desc: desc,
             image: image,
             price: price,
             rating: rating
-        })
+        }
+
+        products.push(newProduct);
+
+
+        localStorage.setItem("@productsLocal", JSON.stringify(products));
         
-        console.log(`Produto cadastrado: ${response.data}`)
+        console.log(`Produto cadastrado: ${newProduct}`)
   
         toast.success("Produto cadastrado");
         setName("");
