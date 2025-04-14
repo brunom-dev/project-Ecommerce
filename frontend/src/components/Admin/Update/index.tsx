@@ -1,7 +1,8 @@
-import { API } from "../../../services/api"
+// import { API } from "../../../services/api"
 
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { CardProps } from "../../../interfaces/CardProps";
 
 export function Update() {
     const [id, setId] = useState<string>("");
@@ -21,42 +22,70 @@ export function Update() {
 
         setLoading(true);
         try {
-            const response = await API.put(`/produtos/${id}`, {
+            // const response = await API.put(`/produtos/${id}`, {
+            //     name: name,
+            //     desc: desc,
+            //     image: image,
+            //     price: price,
+            //     rating: rating
+            // })
+
+            const productsCurrent = localStorage.getItem("@productsLocal");
+
+            const products: CardProps[] = productsCurrent ? JSON.parse(productsCurrent) : [];   
+            
+            const exist = products.some(item => item.id === Number(id));
+            if (!exist) throw new Error("Produto nao encontrado")  
+
+            const productUpdate: CardProps = {
+                id: Number(id),
                 name: name,
                 desc: desc,
                 image: image,
-                price: price,
+                price: Number(price),
                 rating: rating
+            }
+
+            const productsUpdates: CardProps[] = products.map((item) => {
+                if (item.id === Number(id)) {
+                    return productUpdate
+                }
+
+                return item;
             })
 
-            console.log("Produto atualizado: ", response.data);
-
+            localStorage.setItem("@productsLocal", JSON.stringify(productsUpdates));
             toast.success("Produto atualizado");
+            console.log("Produto atualizado: ", productUpdate);
+
         } catch (error: unknown) {
+            console.log("Erro ao atualizar", error);
+            toast.error("Produto não encontrado.");
+
+
+            // if (typeof error === "object" && error !== null && "response" in error) {
+            //     const err = error as { response: { status: number; data?: unknown } };
         
-            if (typeof error === "object" && error !== null && "response" in error) {
-                const err = error as { response: { status: number; data?: unknown } };
+            //     console.error("Erro do servidor:", err.response.status, err.response.data);
         
-                console.error("Erro do servidor:", err.response.status, err.response.data);
-        
-                switch (err.response.status) {
-                    case 400:
-                        toast.error("Requisição inválida.");
-                        break;
-                    case 401:
-                        toast.error("Não autorizado.");
-                        break;
-                    case 403:
-                        toast.error("Acesso proibido.");
-                        break;
-                    case 404:
-                        toast.error("Produto não encontrado.");
-                        break;
-                    case 500:
-                        toast.error("Erro interno do servidor.");
-                        break;
-                }
-            }
+            //     switch (err.response.status) {
+            //         case 400:
+            //             toast.error("Requisição inválida.");
+            //             break;
+            //         case 401:
+            //             toast.error("Não autorizado.");
+            //             break;
+            //         case 403:
+            //             toast.error("Acesso proibido.");
+            //             break;
+            //         case 404:
+            //             toast.error("Produto não encontrado.");
+            //             break;
+            //         case 500:
+            //             toast.error("Erro interno do servidor.");
+            //             break;
+            //     }
+            // }
         } finally {
             setLoading(false);
         }
