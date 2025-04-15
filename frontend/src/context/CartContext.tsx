@@ -88,6 +88,7 @@ export const CartProvider = ({children}: {children: React.ReactNode}) => {
         removeAllCart() {
             setProducts([]);
             setNumberCart(0);
+            setTotal(0);
         }
 
     }
