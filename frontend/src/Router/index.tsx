@@ -8,7 +8,7 @@ import { NotFound } from "../page/NotFound"
 import { Cart } from "../page/Cart"
 import { Admin } from "../page/Admin"
 import { Login } from "../page/Login"
-import About from "../page/about/about"
+import { About } from "../page/about"
 
 
 export const Router = createBrowserRouter([
