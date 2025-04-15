@@ -1,6 +1,7 @@
-import { API } from "../../../services/api"
+// import { API } from "../../../services/api"
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { CardProps } from "../../../interfaces/CardProps";
 
 export function Delete() {
     const [id, setId] = useState<number | "">("");
@@ -14,14 +15,30 @@ export function Delete() {
 
         setLoading(true);
         try {
-            const response = await API.delete(`/produtos/${id}`)
+            // const response = await API.delete(`/produtos/${id}`)
 
-            console.log("Produto deletado", response.data);
+            const productsCurrent = localStorage.getItem("@productsLocal");
+
+            const products: CardProps[] = productsCurrent ? JSON.parse(productsCurrent) : [];   
+            
+            const exist = products.some(item => item.id === Number(id));
+            if (!exist) throw new Error("Produto nao encontrado") 
+                
+            const productsUpdates = products.filter((item) => {
+                return item.id !== Number(id)
+            })
+
+            localStorage.setItem("@productsLocal", JSON.stringify(productsUpdates));
+
+            console.log("Produto deletado", );
             toast.success("Produto deletado");
             setId("");
         } catch (error: unknown) {
+
+            console.log("Erro ao deletar: ", error);
+            toast.error("" + error);
         
-            if (typeof error === "object" && error !== null && "response" in error) {
+            /* if (typeof error === "object" && error !== null && "response" in error) {
                 const err = error as { response: { status: number; data?: unknown } };
         
                 console.error("Erro do servidor:", err.response.status, err.response.data);
@@ -43,7 +60,7 @@ export function Delete() {
                         toast.error("Erro interno do servidor.");
                         break;
                 }
-            }
+            } */
         }
         
          finally {
