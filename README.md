@@ -1,6 +1,4 @@
-# E-commerce Project
-
-Projeto de e-commerce desenvolvido com foco em aprendizado e prática de desenvolvimento full stack.
+# E-commerce Tech Store
 
 ## Tecnologias Utilizadas
 
